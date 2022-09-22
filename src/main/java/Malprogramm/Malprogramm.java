@@ -16,7 +16,7 @@ public class Malprogramm {
     public Malprogramm() {
         fenster = new Fenster("Jonah-Paint", 500, 500);
         stift = new IgelStift();
-        stift.setzeLinienBreite(8);
+        stift.setzeLinienBreite(10);
         stift.setzeFarbe(Farbe.CYAN);
 
         //Setzen des Mauslauschers
