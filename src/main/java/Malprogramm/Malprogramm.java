@@ -9,7 +9,6 @@ public class Malprogramm {
 
     Fenster fenster;
     IgelStift stift;
-    Tastatur tastatur;
 
     public Malprogramm() {
         fenster = new Fenster("Jonah-Paint", 500, 500);
