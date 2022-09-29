@@ -39,6 +39,7 @@ public class Malprogramm {
             @Override
             public void bearbeiteMausDruckRechts(Object o, int i, int i1) {
                 stift.normal();
+                stift.hoch();
             }
 
             @Override
@@ -49,6 +50,7 @@ public class Malprogramm {
             @Override
             public void bearbeiteMausLosRechts(Object o, int i, int i1) {
                 stift.normal();
+                stift.hoch();
             }
 
             @Override
