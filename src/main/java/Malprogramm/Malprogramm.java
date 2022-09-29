@@ -88,10 +88,26 @@ public class Malprogramm {
         return new TastenLauscher() {
             @Override
             public void bearbeiteTaste(Komponente komponente, char c) {
-                if (c == 'r') {
-                    stift.radiere();
+
+                switch (c) {
+                    case ('r'):
+                        stift.radiere();
+                        break;
+                    case ('s'):
+                        stift.setzeFarbe(Farbe.SCHWARZ);
+                        break;
+                    case ('g'):
+                        stift.setzeFarbe(Farbe.GRÜN);
+                        break;
+                    case ('b'):
+                        stift.setzeFarbe(Farbe.BLAU);
+                        break;
+                    case ('m'):
+                        stift.setzeFarbe(Farbe.MAGENTA);
+                        break;
                 }
             }
+
         };
     }
 }
