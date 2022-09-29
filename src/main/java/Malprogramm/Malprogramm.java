@@ -1,9 +1,6 @@
 package Malprogramm;
 
-import basis.Farbe;
-import basis.Fenster;
-import basis.IgelStift;
-import basis.MausLauscherStandard;
+import basis.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +9,7 @@ public class Malprogramm {
 
     Fenster fenster;
     IgelStift stift;
+    Tastatur tastatur;
 
     public Malprogramm() {
         fenster = new Fenster("Jonah-Paint", 500, 500);
@@ -21,7 +19,12 @@ public class Malprogramm {
 
         //Setzen des Mauslauschers
         fenster.setzeMausLauscherStandard(this.getMouseListener());
+
+        //Programm schließt bei schließen des Fensters
         fenster.getMeinJFrame().setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        //Setzen des Tastenlauschers
+        fenster.setzeTastenLauscher(this.getTastaturListener());
 
         this.addGui();
     }
@@ -36,7 +39,7 @@ public class Malprogramm {
 
             @Override
             public void bearbeiteMausDruckRechts(Object o, int i, int i1) {
-
+                stift.normal();
             }
 
             @Override
@@ -46,7 +49,7 @@ public class Malprogramm {
 
             @Override
             public void bearbeiteMausLosRechts(Object o, int i, int i1) {
-
+                stift.normal();
             }
 
             @Override
@@ -78,5 +81,16 @@ public class Malprogramm {
 
 
     }
+    //Rückgabemethode für Tastenlauscher
 
+    public TastenLauscher getTastaturListener() {
+        return new TastenLauscher() {
+            @Override
+            public void bearbeiteTaste(Komponente komponente, char c) {
+                if (c == 'r') {
+                    stift.radiere();
+                }
+            }
+        };
+    }
 }
