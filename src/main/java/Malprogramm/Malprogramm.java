@@ -10,6 +10,7 @@ public class Malprogramm {
     Fenster fenster;
     IgelStift stift;
 
+
     public Malprogramm() {
         fenster = new Fenster("Jonah-Paint", 500, 500);
         stift = new IgelStift();
@@ -82,8 +83,9 @@ public class Malprogramm {
 
 
     }
-    //Rückgabemethode für Tastenlauscher
 
+    //Rückgabemethode für Tastenlauscher
+    //Änderung von Farbe und Radierer
     public TastenLauscher getTastaturListener() {
         return new TastenLauscher() {
             @Override
@@ -105,9 +107,104 @@ public class Malprogramm {
                     case ('m'):
                         stift.setzeFarbe(Farbe.MAGENTA);
                         break;
+
+
                 }
             }
 
         };
     }
+
+    leinwand
+
+    // Baum
+    public void zeichneBaum(int x, int y) {
+        //Benutzen und Abbauen
+        stift.bewegeBis(x, y);
+        stift.runter();
+        stift.dreheUm(315);
+        stift.bewegeUm(75);
+        stift.dreheUm(225);
+        stift.bewegeUm(40);
+        stift.dreheUm(135);
+        stift.bewegeUm(75);
+        stift.dreheUm(225);
+        stift.bewegeUm(50);
+        stift.dreheUm(90);
+        stift.bewegeUm(50);
+        stift.dreheUm(270);
+        stift.bewegeUm(35);
+        stift.dreheUm(270);
+        stift.bewegeUm(50);
+        stift.dreheUm(90);
+        stift.bewegeUm(50);
+        stift.dreheUm(225);
+        stift.bewegeUm(75);
+        stift.dreheUm(135);
+        stift.bewegeUm(40);
+        stift.dreheUm(225);
+        stift.bewegeUm(75);
+        stift.hoch();
+        stift.dreheBis(0);
+        stift.bewegeBis(0, 0);
+    }
+
+    //Haus
+    public void zeichneHaus(int x, int y) {
+        //Benutzen und Abbauen
+        stift.bewegeBis(x, y);
+        stift.runter();
+        for (int i = 0; i < 3; i++) {
+            stift.bewegeUm(75);
+            stift.dreheUm(90);
+        }
+        stift.bewegeUm(75);
+        stift.dreheUm(135);
+        stift.bewegeUm(106);
+        for (int i = 0; i < 2; i++) {
+            stift.dreheUm(90);
+            stift.bewegeUm(53);
+        }
+        stift.dreheUm(90);
+        stift.bewegeUm(106);
+        stift.hoch();
+        stift.dreheBis(0);
+        stift.bewegeBis(0, 0);
+    }
+
+    //Buchstabe
+    public void zeichneE(int x, int y) {
+        //Benutzen und Abbauen
+        stift.bewegeBis(x, y);
+        stift.runter();
+        stift.bewegeUm(100);
+        stift.dreheUm(270);
+        stift.bewegeUm(50);
+        stift.dreheUm(270);
+        stift.bewegeUm(100);
+        stift.dreheUm(90);
+        stift.bewegeUm(50);
+        stift.dreheUm(90);
+        stift.bewegeUm(100);
+        stift.dreheUm(270);
+        stift.bewegeUm(50);
+        stift.dreheUm(270);
+        stift.bewegeUm(100);
+        stift.dreheUm(90);
+        stift.bewegeUm(50);
+        stift.dreheUm(90);
+        stift.bewegeUm(100);
+        stift.dreheUm(270);
+        stift.bewegeUm(50);
+        stift.dreheUm(270);
+        stift.bewegeUm(150);
+        stift.dreheUm(270);
+        stift.bewegeUm(250);
+        stift.dreheUm(270);
+        stift.bewegeUm(50);
+        stift.hoch();
+        stift.dreheBis(0);
+        stift.bewegeBis(0, 0);
+    }
+
 }
