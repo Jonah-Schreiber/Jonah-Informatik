@@ -115,7 +115,6 @@ public class Malprogramm {
         };
     }
 
-    leinwand
 
     // Baum
     public void zeichneBaum(int x, int y) {
