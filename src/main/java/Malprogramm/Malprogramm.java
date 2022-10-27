@@ -11,11 +11,12 @@ public class Malprogramm {
     IgelStift stift;
 
 
+
     public Malprogramm() {
         fenster = new Fenster("Jonah-Paint", 500, 500);
         stift = new IgelStift();
         stift.setzeLinienBreite(10);
-        stift.setzeFarbe(Farbe.CYAN);
+        stift.setzeFarbe(Farbe.BLAU);
 
         //Setzen des Mauslauschers
         fenster.setzeMausLauscherStandard(this.getMouseListener());
@@ -75,17 +76,47 @@ public class Malprogramm {
         leeren.addActionListener(e -> fenster.loescheAlles());
 
         jFrame.getContentPane().add(leeren);
+
+        String[] colorSelection = {"blau", "grün", "schwarz", "gelb"};
+        JComboBox colorBox = new JComboBox<>(colorSelection);
+
+        colorBox.addActionListener(e -> {
+
+            switch (colorBox.getSelectedItem().toString()) {
+
+                case "blau": {            stift.setzeFarbe(Farbe.BLAU);
+                    break;
+                }
+                case "grün": {            stift.setzeFarbe(Farbe.GRÜN);
+                    break;
+
+                }
+                case "schwarz": {            stift.setzeFarbe(Farbe.SCHWARZ);
+                    break;
+
+                }
+                case "gelb": {            stift.setzeFarbe(Farbe.GELB);
+                    break;
+
+                }
+
+
+            }
+
+        });
+
+        jFrame.getContentPane().add(colorBox);
+
+
         jFrame.setLayout(new FlowLayout());
 
         jFrame.setLocationRelativeTo(null);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setVisible(true);
-
-
     }
 
     //Rückgabemethode für Tastenlauscher
-    //Änderung von Farbe und Radierer
+    //Änderung Radierer
     public TastenLauscher getTastaturListener() {
         return new TastenLauscher() {
             @Override
@@ -95,19 +126,22 @@ public class Malprogramm {
                     case ('r'):
                         stift.radiere();
                         break;
-                    case ('s'):
-                        stift.setzeFarbe(Farbe.SCHWARZ);
+                    case ('+'):
+                        stift.setzeLinienBreite(stift.linienBreite() + 5);
                         break;
-                    case ('g'):
-                        stift.setzeFarbe(Farbe.GRÜN);
+                    case ('-'):
+                        if (stift.linienBreite() == 5) {return;}
+                        stift.setzeLinienBreite(stift.linienBreite() - 5);
                         break;
-                    case ('b'):
-                        stift.setzeFarbe(Farbe.BLAU);
+                    case('b'):
+                        zeichneBaum((int) stift.hPosition(), (int) stift.vPosition());
                         break;
-                    case ('m'):
-                        stift.setzeFarbe(Farbe.MAGENTA);
+                    case ('h'):
+                        zeichneHaus((int) stift.hPosition(), (int) stift.vPosition());
                         break;
-
+                    case ('e'):
+                        zeichneE((int) stift.hPosition(), (int) stift.vPosition());
+                        break;
 
                 }
             }
