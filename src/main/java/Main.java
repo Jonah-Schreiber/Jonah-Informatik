@@ -27,7 +27,10 @@ public class Main {
         //Flugkurve flugkurve = new Flugkurve();
 
         //Malprogramm
-        Malprogramm malprogramm = new Malprogramm();
+        //Malprogramm malprogramm = new Malprogramm();
+
+        //Zahlenraten
+        Zahlenraten zahlenraten = new Zahlenraten();
 
     }
 
