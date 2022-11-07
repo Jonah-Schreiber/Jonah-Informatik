@@ -8,10 +8,10 @@ public class Zahlenraten {
     ZahlenFeld eingabe;
     BeschriftungsFeld aus;
     TextFeld kommentar;
-    Knopf ende;
+    Knopf rateKnopf;
     Knopf neu;
 
-    int gedachteZahl;
+    int gedachteZahl, ratezahl;
 
 
     public Zahlenraten() {
@@ -25,32 +25,58 @@ public class Zahlenraten {
         aus = new BeschriftungsFeld("Bewertung", 70, 150, 100, 20);
         kommentar = new TextFeld(20, 170, 160, 30);
         kommentar.setzeBenutzbar(false);
-        ende = new Knopf("Raten", 10, 250, 150, 20);
+        rateKnopf = new Knopf("Raten", 10, 250, 150, 20);
         neu = new Knopf("Start", 160, 250, 150, 20);
-        gedachteZahl = Hilfe.zufall(1, 100);
-        int rateZahl = 0;
+        gedachteZahl = Hilfe.zufall(0, 100);
+        ratezahl = 0;
+        System.out.println("Zufallszahl ist" + gedachteZahl);
 
+        rateKnopf.setzeKnopfLauscher(new KnopfLauscher() {
+            @Override
+            public void bearbeiteKnopfDruck(Knopf knopf) {
+                raten();
+            }
+        });
+
+        neu.setzeKnopfLauscher(new KnopfLauscher() {
+            @Override
+            public void bearbeiteKnopfDruck(Knopf knopf) {
+                gedachteZahl = Hilfe.zufall(0, 100);
+                kommentar.setzeText("Neue Zahl generiert!");
+            }
+        });
 
     }
+
 
     private void raten() {
 
         int distance = getAbstand(eingabe.ganzZahl(), gedachteZahl);
-        /*
-        if distance == 0 {
-            System.out.println("Zahl erraten");
+
+        System.out.println(distance);
+
+        if (distance == 0) {
+            System.out.println("Zahl erraten!");
+            kommentar.setzeText("Zahl erraten!");
+
         }
-        //if-Abfragen ob Abstand groß oder klein oder mittel ist
-        */
+        else if (distance <= 5) {
+            System.out.println("heiß!");
+            kommentar.setzeText("heiß");
+
+        }
+        else {
+            System.out.println("kalt du sau!");
+
+        }
 
     }
 
     private static int getAbstand(int rateZahl, int vergleichsZahl) {
 
-        int distance = 0;
+        int zahl = Hilfe.betrag(rateZahl - vergleichsZahl);
 
-
-        return distance;
+        return zahl;
     }
 }
 
