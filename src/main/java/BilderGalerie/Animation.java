@@ -29,7 +29,6 @@ public class Animation {
         for (int i = 0; i < 10; i++) {
             b2.setzeSichtbar(false);
             b3.setzeSichtbar(false);
-            ;
             b1.setzeSichtbar(true);
             Hilfe.pause(300);
             b1.setzeSichtbar(false);
