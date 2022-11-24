@@ -1,3 +1,4 @@
+package Spiele;
 
 import basis.*;
 
@@ -16,8 +17,8 @@ public class Zahlenraten {
 
 
     public Zahlenraten() {
-        fenster = new Fenster("Zahlenraten", 1000, 1000);
-        titel = new BeschriftungsFeld("Zahlenraten", 45, 30, 150, 30);
+        fenster = new Fenster("Spiele.Zahlenraten", 1000, 1000);
+        titel = new BeschriftungsFeld("Spiele.Zahlenraten", 45, 30, 150, 30);
         titel.setzeSchriftGroesse(20);
         ein = new BeschriftungsFeld("Welche Zahl ...", 35, 80, 150, 20);
         eingabe = new ZahlenFeld(80, 100, 40, 30);

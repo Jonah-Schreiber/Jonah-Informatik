@@ -1,5 +1,4 @@
-import Ballwurf.Flugkurve;
-import Malprogramm.*;
+import Spiele.Zahlenraten;
 
 import java.io.IOException;
 
@@ -29,12 +28,14 @@ public class Main {
         //Malprogramm
         //Malprogramm malprogramm = new Malprogramm();
 
-        //Zahlenraten
-        Zahlenraten zahlenraten = new Zahlenraten();
+        //Spiele.Zahlenraten
+        //Zahlenraten zahlenraten = new Zahlenraten();
 
         //Würfelspiel
-        //Wuerfelspiel wuerfelspiel = new Wuerfelspiel();
+        //Spiele.Wuerfelspiel wuerfelspiel = new Spiele.Wuerfelspiel();
 
+        //Nimm Spiel
+        Spiele.DrawGame drawGame = new  Spiele.DrawGame();
     }
 
 }

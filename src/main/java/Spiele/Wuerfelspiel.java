@@ -1,3 +1,5 @@
+package Spiele;
+
 import basis.*;
 
 import javax.swing.*;
