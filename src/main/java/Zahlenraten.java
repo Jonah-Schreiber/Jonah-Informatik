@@ -5,17 +5,18 @@ public class Zahlenraten {
     Fenster fenster;
     BeschriftungsFeld titel;
     BeschriftungsFeld ein;
+    BeschriftungsFeld erklaerung1, erklaerung2, erklaerung3, erklaerung4, erklaerung5;
     ZahlenFeld eingabe;
     BeschriftungsFeld aus;
     TextFeld kommentar;
     Knopf rateKnopf;
-    Knopf neu;
+    Knopf neu, schließen;
 
     int gedachteZahl, ratezahl;
 
 
     public Zahlenraten() {
-        fenster = new Fenster("Zahlenraten", 500, 500);
+        fenster = new Fenster("Zahlenraten", 1000, 1000);
         titel = new BeschriftungsFeld("Zahlenraten", 45, 30, 150, 30);
         titel.setzeSchriftGroesse(20);
         ein = new BeschriftungsFeld("Welche Zahl ...", 35, 80, 150, 20);
@@ -25,8 +26,13 @@ public class Zahlenraten {
         aus = new BeschriftungsFeld("Bewertung", 70, 150, 100, 20);
         kommentar = new TextFeld(20, 170, 160, 30);
         kommentar.setzeBenutzbar(false);
-        rateKnopf = new Knopf("Raten", 10, 250, 150, 20);
-        neu = new Knopf("Start", 160, 250, 150, 20);
+        erklaerung1 = new BeschriftungsFeld("Zahl erraten! -> Abstand 0", 200, 100, 150, 20);
+        erklaerung2 = new BeschriftungsFeld("sehr heiß -> Abstand < 5", 200, 120, 150, 20);
+        erklaerung3 = new BeschriftungsFeld("heiß -> Abstand < 20", 200, 140, 150, 20);
+        erklaerung4 = new BeschriftungsFeld("warm -> Abstand < 50", 200, 160, 150, 20);
+        erklaerung5 = new BeschriftungsFeld("kalt -> Abstand > 50", 200, 180, 150, 20);
+        rateKnopf = new Knopf("Raten", 10, 250, 150, 50);
+        neu = new Knopf("neues Spiel", 150, 250, 150, 50);
         gedachteZahl = Hilfe.zufall(0, 100);
         ratezahl = 0;
         System.out.println("Zufallszahl ist" + gedachteZahl);

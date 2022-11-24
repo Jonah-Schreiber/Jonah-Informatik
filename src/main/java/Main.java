@@ -30,10 +30,10 @@ public class Main {
         //Malprogramm malprogramm = new Malprogramm();
 
         //Zahlenraten
-        //Zahlenraten zahlenraten = new Zahlenraten();
+        Zahlenraten zahlenraten = new Zahlenraten();
 
         //Würfelspiel
-        Wuerfelspiel wuerfelspiel = new Wuerfelspiel();
+        //Wuerfelspiel wuerfelspiel = new Wuerfelspiel();
 
     }
 
