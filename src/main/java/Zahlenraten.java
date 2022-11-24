@@ -61,12 +61,20 @@ public class Zahlenraten {
 
         }
         else if (distance <= 5) {
-            System.out.println("heiß!");
-            kommentar.setzeText("heiß");
+            System.out.println("sehr heiß");
+            kommentar.setzeText("sehr heiß");
 
         }
+        else if (distance <= 20) {
+            System.out.println("heiß");
+            kommentar.setzeText("heiß");
+
+        } else if (distance <= 50) {
+            System.out.println("warm");
+            kommentar.setzeText("warm");
+        }
         else {
-            System.out.println("kalt du sau!");
+            System.out.println("kalt");
 
         }
 
