@@ -1,3 +1,4 @@
+import Spiele.NimmSpiel;
 import Spiele.Zahlenraten;
 
 import java.io.IOException;
@@ -35,7 +36,10 @@ public class Main {
         //Spiele.Wuerfelspiel wuerfelspiel = new Spiele.Wuerfelspiel();
 
         //Nimm Spiel
-        Spiele.DrawGame drawGame = new  Spiele.DrawGame();
+        //DrawGame drawGame = new  DrawGame();
+
+        //NImm Spiel 2
+        NimmSpiel nimmSpiel = new NimmSpiel();
     }
 
 }
