@@ -1,5 +1,4 @@
-import Spiele.NimmSpiel;
-import Spiele.Zahlenraten;
+import Arrays.TestArray;
 
 import java.io.IOException;
 
@@ -35,11 +34,12 @@ public class Main {
         //Würfelspiel
         //Spiele.Wuerfelspiel wuerfelspiel = new Spiele.Wuerfelspiel();
 
-        //Nimm Spiel
-        //DrawGame drawGame = new  DrawGame();
-
         //NImm Spiel 2
-        NimmSpiel nimmSpiel = new NimmSpiel();
+        //NimmSpiel nimmSpiel = new NimmSpiel();
+
+        //TestArray
+        TestArray testArray = new TestArray();
+
     }
 
 }
