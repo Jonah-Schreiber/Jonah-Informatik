@@ -1,3 +1,4 @@
+import ArrayAnwendung.Sortieren1;
 import Arrays.TestArray;
 
 import java.io.IOException;
@@ -38,7 +39,10 @@ public class Main {
         //NimmSpiel nimmSpiel = new NimmSpiel();
 
         //TestArray
-        TestArray testArray = new TestArray();
+        //TestArray testArray = new TestArray();
+
+        //BubbleSort
+        Sortieren1 sortieren1 = new Sortieren1();
 
     }
 
