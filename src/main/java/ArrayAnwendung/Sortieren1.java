@@ -35,8 +35,8 @@ public class Sortieren1 {
 
 
         //Starten der Sortiermethode
-        this.bubblesort();
-        //this.selectionSort();
+        //this.bubblesort();
+        this.selectionSort();
         //this.insertionsort();
     }
 
