@@ -1,4 +1,5 @@
 import ArrayAnwendung.Sortieren1;
+import ArrayAnwendung.Verschlüsselung;
 import Arrays.TestArray;
 
 import java.io.IOException;
@@ -42,7 +43,10 @@ public class Main {
         //TestArray testArray = new TestArray();
 
         //BubbleSort
-        Sortieren1 sortieren1 = new Sortieren1();
+        //Sortieren1 sortieren1 = new Sortieren1();
+
+        //Verschlüsselung
+        Verschlüsselung verschlüsselung =new Verschlüsselung();
 
     }
 
