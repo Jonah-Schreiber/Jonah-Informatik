@@ -1,5 +1,5 @@
 import ArrayAnwendung.Sortieren1;
-import ArrayAnwendung.Verschlüsselung;
+import ArrayAnwendung.Verschluesselung;
 import Arrays.TestArray;
 
 import java.io.IOException;
@@ -46,7 +46,7 @@ public class Main {
         //Sortieren1 sortieren1 = new Sortieren1();
 
         //Verschlüsselung
-        Verschlüsselung verschlüsselung =new Verschlüsselung();
+        Verschluesselung verschluesselung =new Verschluesselung();
 
     }
 
