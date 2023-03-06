@@ -1,5 +1,7 @@
+import ArrayAnwendung.Palindrom;
 import ArrayAnwendung.Sortieren1;
 import ArrayAnwendung.Verschluesselung;
+
 import Arrays.TestArray;
 
 import java.io.IOException;
@@ -46,8 +48,10 @@ public class Main {
         //Sortieren1 sortieren1 = new Sortieren1();
 
         //Verschlüsselung
-        Verschluesselung verschluesselung =new Verschluesselung();
+        //Verschluesselung verschluesselung =new Verschluesselung();
 
+        //Palindrom
+        Palindrom palindrom = new Palindrom();
     }
 
 }
