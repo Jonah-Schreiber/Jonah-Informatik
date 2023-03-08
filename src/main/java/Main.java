@@ -1,4 +1,5 @@
 import ArrayAnwendung.Palindrom;
+import ArrayAnwendung.PalindromTest;
 import ArrayAnwendung.Sortieren1;
 import ArrayAnwendung.Verschluesselung;
 
@@ -51,7 +52,10 @@ public class Main {
         //Verschluesselung verschluesselung =new Verschluesselung();
 
         //Palindrom
-        Palindrom palindrom = new Palindrom();
+        //Palindrom palindrom = new Palindrom();
+
+        //PalindromTest
+        PalindromTest palindromTest = new PalindromTest();
     }
 
 }
