@@ -52,10 +52,10 @@ public class Main {
         //Verschluesselung verschluesselung =new Verschluesselung();
 
         //Palindrom
-        //Palindrom palindrom = new Palindrom();
+        Palindrom palindrom = new Palindrom();
 
         //PalindromTest
-        PalindromTest palindromTest = new PalindromTest();
+        //PalindromTest palindromTest = new PalindromTest();
     }
 
 }

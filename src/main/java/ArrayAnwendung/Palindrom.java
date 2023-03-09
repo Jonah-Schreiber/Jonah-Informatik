@@ -17,7 +17,7 @@ public class Palindrom {
 
 
     public Palindrom() {
-        fenster = new Fenster((500, 500);
+        fenster = new Fenster(500, 500);
         eingabe = new TextFeld(50, 50, 400, 30);
         ausgabe = new TextFeld(50, 100, 400, 30);
         pruefen = new Knopf("Prüfen", 50, 150, 100, 40);
@@ -30,7 +30,7 @@ public class Palindrom {
         eingabeText = eingabe.text();
         //System.out.println(eingabeText);
         //System.out.println(eingabeText.length());
-        for (int i = eingabeText.length() - 1; i >= 0; i--) ;
+        for (int i = eingabeText.length() - 1; i >= 0; i--)
         {
             ausgabeText += String.valueOf(eingabeText.charAt(i));
         }
