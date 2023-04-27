@@ -4,6 +4,8 @@ import ArrayAnwendung.Sortieren1;
 import ArrayAnwendung.Verschluesselung;
 
 import Arrays.TestArray;
+import Lampensimulation.Lampe;
+import Lampensimulation.LampenSimulation;
 
 import java.io.IOException;
 
@@ -52,10 +54,14 @@ public class Main {
         //Verschluesselung verschluesselung =new Verschluesselung();
 
         //Palindrom
-        Palindrom palindrom = new Palindrom();
+        //Palindrom palindrom = new Palindrom();
 
         //PalindromTest
         //PalindromTest palindromTest = new PalindromTest();
+
+        //Lampensimulation
+        Lampe lampe = new Lampe();
+        LampenSimulation lampenSimulation = new LampenSimulation();
     }
 
 }
