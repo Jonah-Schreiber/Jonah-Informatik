@@ -1,25 +1,67 @@
 package Lampensimulation;
 
-import basis.Farbe;
-import basis.Hilfe;
-import basis.Muster;
-import basis.Stift;
+import basis.*;
 
 public class Lampe {
-    private Stift stift;
+    private Stift stift = new Stift();
+
+    private boolean isOn = false;
     private int xwert, ywert, radius;
+    private Bild bild = new Bild();
 
-
-    public Lampe() {
-
-    }
-
-    public void zeigeLampe(int x, int y, int r) {
+    public Lampe(int x, int y, int r) {
         xwert = x;
         ywert = y;
         radius = r;
+
+        bild.setzeMausLauscherStandard(getMausLauscher());
+        this.zeigeLampe();
+    }
+
+    private MausLauscherStandard getMausLauscher() {
+        return new MausLauscherStandard() {
+            @Override
+            public void bearbeiteMausDruck(Object o, int i, int i1) {
+                isOn = !isOn;
+                System.out.println("Schalter!");
+                zeigeLampe();
+            }
+
+            @Override
+            public void bearbeiteMausDruckRechts(Object o, int i, int i1) {
+
+            }
+
+            @Override
+            public void bearbeiteMausLos(Object o, int i, int i1) {
+
+            }
+
+            @Override
+            public void bearbeiteMausLosRechts(Object o, int i, int i1) {
+
+            }
+
+            @Override
+            public void bearbeiteMausBewegt(Object o, int i, int i1) {
+
+            }
+
+            @Override
+            public void bearbeiteMausGezogen(Object o, int i, int i1) {
+
+            }
+        };
+    }
+
+    public void zeigeLampe() {
+
         stift.normal();
-        stift.setzeFuellMuster(Muster.GEFUELLT);
+        if (isOn) {
+            stift.setzeFuellMuster(Muster.GEFUELLT);
+        } else {
+            stift.setzeFuellMuster(Muster.DURCHSICHTIG);
+        }
         stift.setzeFarbe(Farbe.MAGENTA);
         stift.kreis(xwert, ywert, radius);
     }
@@ -34,11 +76,11 @@ public class Lampe {
         this.loesche();
         xwert = x;
         ywert = y;
-        this.zeigeLampe(xwert, ywert, radius);
+        this.zeigeLampe();
     }
 
     public void lampeAn() {
-        this.zeigeLampe(xwert, ywert, radius);
+        this.zeigeLampe();
     }
 
     public void lampeAus() {

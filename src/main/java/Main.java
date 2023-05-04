@@ -60,7 +60,6 @@ public class Main {
         //PalindromTest palindromTest = new PalindromTest();
 
         //Lampensimulation
-        Lampe lampe = new Lampe();
         LampenSimulation lampenSimulation = new LampenSimulation();
     }
 
