@@ -1,11 +1,13 @@
 package Lampensimulation;
 
+import basis.Farbe;
 import basis.Hilfe;
 import basis.Muster;
 import basis.Stift;
 
 public class Lampe {
     private Stift stift;
+    private int xwert, ywert, radius;
 
 
     public Lampe() {
@@ -18,7 +20,7 @@ public class Lampe {
         radius = r;
         stift.normal();
         stift.setzeFuellMuster(Muster.GEFUELLT);
-        stift.setzeFarbe(farbe);
+        stift.setzeFarbe(Farbe.MAGENTA);
         stift.kreis(xwert, ywert, radius);
     }
 
