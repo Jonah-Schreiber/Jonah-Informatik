@@ -3,6 +3,7 @@ package Simulation;
 import basis.Farbe;
 import basis.Muster;
 import basis.Stift;
+import basis.*;
 
 import java.awt.*;
 
@@ -14,7 +15,7 @@ public class Lampe {
     public Lampe(int x, int y, int r) {
 
         stift = new Stift();
-        // farbe=Farbe.rgb(Hilfe.zufall(150,250), Hilfe.zufall(150,250),Hilfe.zufall(150,250));
+        farbe = Farbe.rgb(Hilfe.zufall(150,250), Hilfe.zufall(150,250),Hilfe.zufall(150,250));
         farbe = Farbe.rgb(0, 0, 255);
     }
 

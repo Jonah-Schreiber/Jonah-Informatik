@@ -1,41 +1,40 @@
 package Simulation;
 
 
-import basis.Fenster;
-import basis.Hilfe;
-import basis.Knopf;
-import basis.Maus;
+import basis.*;
 
 public class Simulationsumgebung {
     private Fenster fenster;
     private Knopf kEnde, kSchalterEin, kSchalterAus;
-    private Lampe lampe1, lampe2;
-    private Maus maus;
+    ZahlenFeld lampenwahl;
+    Lampe lampe[] = new Lampe[2];
 
-    public Simulationsumgebung(){
-        fenster = new Fenster("Lichtertümpel",500,500);
-        maus = new Maus();
-        kEnde = new Knopf("Ende",420,450,50,20);
-        kSchalterEin = new Knopf("SchalterEin", 30,450,50,20);
-        kSchalterAus = new Knopf("SchalterAus", )
-        lampe1 = new Lampe(100, 50, 10);
-        lampe2 = new Lampe(150, 100, 20);
-    }
-    public void fuehreAus(){
-        while (! kEnde.wurdeGedrueckt()) {
-            if (lampe1.zeigeLampe(maus.hPosition(), maus.vPosition()); {
-                lampe1.setztePosition(Hilfe.zufall(100,200),Hilfe.zufall(100,200));
-            }
-            //if (lampe2.zeigeLampe(maus.hPosition(), maus.vPosition())) {
-                //lampe2.blinke();
-            }
-            if (kSchalterEin.wurdeGedrueckt()) {
-                lampe1.lampeEin();
-                lampe2.lampeEin();
-            }
-        }
-        fenster.gibFrei();
+    public Simulationsumgebung() {
+        fenster = new Fenster("Simulationsumgebung", 1000, 500);
+        lampenwahl = new ZahlenFeld(30, 350, 100, 25);
+        kEnde = new Knopf("Ende", 420, 450, 200, 20);
+        kEnde.setzeKnopfLauscher(knopf -> this.fenster.gibFrei());
+        kSchalterEin = new Knopf("Lampe einschalten", 30, 380, 200, 20);
+        kSchalterEin.setzeKnopfLauscher(knopf -> this.lampeSchalterEin());
+        kSchalterAus = new Knopf("Lampe ausschalten", 100, 450, 200, 20);
+        kSchalterAus.setzeKnopfLauscher(knopf -> this.lampeSchalterAus());
+        lampe[0] = new Lampe(100, 50, 10);
+        lampe[0].zeigeLampe(50, 50, 20);
+        lampe[1] = new Lampe(150, 100, 20);
+        lampe[1].zeigeLampe(100, 200, 30);
     }
 
+    public void lampeSchalterAus(){
+        var ausgewaehlteLampe = lampenwahl.ganzZahl();
+        lampe[ausgewaehlteLampe-1].loesche();
+        System.out.println("wurde ausgeführt");
     }
+
+    public void lampeSchalterEin(){
+        var ausgewaehlteLampe = lampenwahl.ganzZahl();
+        lampe[ausgewaehlteLampe-1].lampeEin();
+    }
+}
+
+
 
