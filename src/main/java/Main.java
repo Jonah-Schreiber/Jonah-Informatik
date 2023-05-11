@@ -5,6 +5,7 @@ import ArrayAnwendung.Verschluesselung;
 
 import Arrays.TestArray;
 import Simulation.Kette;
+import Simulation.Laufschrift;
 import Simulation.Simulationsumgebung;
 import Simulation.Simulationsumgebung2;
 
@@ -63,7 +64,8 @@ public class Main {
         //Simulationsumgebung
         //Simulationsumgebung simulationsumgebung = new Simulationsumgebung();
         //Simulationsumgebung2 simulationsumgebung2 = new Simulationsumgebung2();
-        Kette kette = new Kette();
+        //Kette kette = new Kette();
+        Laufschrift laufschrift = new Laufschrift();
     }
 
 }
