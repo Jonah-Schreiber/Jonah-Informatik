@@ -4,6 +4,7 @@ import ArrayAnwendung.Sortieren1;
 import ArrayAnwendung.Verschluesselung;
 
 import Arrays.TestArray;
+import Simulation.Kette;
 import Simulation.Simulationsumgebung;
 import Simulation.Simulationsumgebung2;
 
@@ -60,8 +61,9 @@ public class Main {
         //PalindromTest palindromTest = new PalindromTest();
 
         //Simulationsumgebung
-        Simulationsumgebung simulationsumgebung = new Simulationsumgebung();
+        //Simulationsumgebung simulationsumgebung = new Simulationsumgebung();
         //Simulationsumgebung2 simulationsumgebung2 = new Simulationsumgebung2();
+        Kette kette = new Kette();
     }
 
 }
