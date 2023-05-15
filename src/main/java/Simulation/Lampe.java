@@ -16,7 +16,7 @@ public class Lampe {
 
         stift = new Stift();
         farbe = Farbe.rgb(Hilfe.zufall(150,250), Hilfe.zufall(150,250),Hilfe.zufall(150,250));
-        farbe = Farbe.rgb(0, 0, 255);
+        farbe = Farbe.rgb(0, 255, 0);
     }
 
     public void zeigeLampe(int x, int y, int r) {

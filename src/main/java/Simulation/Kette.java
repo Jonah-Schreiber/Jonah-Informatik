@@ -7,6 +7,7 @@ import basis.Knopf;
 public class Kette {
     private Fenster fenster;
     private Knopf kEnde;
+
     Lampe lampe[] = new Lampe[10];
 
     public Kette() {
