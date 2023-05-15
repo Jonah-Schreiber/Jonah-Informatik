@@ -4,10 +4,7 @@ import ArrayAnwendung.Sortieren1;
 import ArrayAnwendung.Verschluesselung;
 
 import Arrays.TestArray;
-import Simulation.Kette;
-import Simulation.Laufschrift;
-import Simulation.Simulationsumgebung;
-import Simulation.Simulationsumgebung2;
+import Simulation.*;
 
 import java.io.IOException;
 
@@ -65,7 +62,8 @@ public class Main {
         //Simulationsumgebung simulationsumgebung = new Simulationsumgebung();
         //Simulationsumgebung2 simulationsumgebung2 = new Simulationsumgebung2();
         //Kette kette = new Kette();
-        Laufschrift laufschrift = new Laufschrift();
+        //Laufschrift laufschrift = new Laufschrift();
+        Laufschrift2 laufschrift2= new Laufschrift2();
     }
 
 }
