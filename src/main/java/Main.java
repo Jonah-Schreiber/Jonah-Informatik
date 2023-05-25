@@ -1,10 +1,6 @@
-import ArrayAnwendung.Palindrom;
-import ArrayAnwendung.PalindromTest;
-import ArrayAnwendung.Sortieren1;
-import ArrayAnwendung.Verschluesselung;
-
-import Arrays.TestArray;
-import Simulation.*;
+import Bankprogramm.Bankkonto;
+import Simulation.BuchstabenSimulation;
+import Simulation.Laufschrift2;
 
 import java.io.IOException;
 
@@ -40,7 +36,7 @@ public class Main {
         //Würfelspiel
         //Spiele.Wuerfelspiel wuerfelspiel = new Spiele.Wuerfelspiel();
 
-        //NImm Spiel 2
+        //Nimm Spiel 2
         //NimmSpiel nimmSpiel = new NimmSpiel();
 
         //TestArray
@@ -63,7 +59,11 @@ public class Main {
         //Simulationsumgebung2 simulationsumgebung2 = new Simulationsumgebung2();
         //Kette kette = new Kette();
         //Laufschrift laufschrift = new Laufschrift();
-        Laufschrift2 laufschrift2= new Laufschrift2();
+        //Laufschrift2 laufschrift2 = new Laufschrift2();
+        //BuchstabenSimulation buchstabenSimulation = new BuchstabenSimulation();
+
+        //Bankprogramm
+        Bankkonto bankkonto = new Bankkonto(123456789, Max Mustermann, 1000.0);
     }
 
 }
